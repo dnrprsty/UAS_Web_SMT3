@@ -1,0 +1,209 @@
+/* ===============================
+   RESET & COLOR SYSTEM
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #070a17;
+  --bg-card: rgba(255,255,255,0.07);
+  --border-glass: rgba(255,255,255,0.18);
+
+  --primary: #7c7cff;     /* neon purple */
+  --secondary: #22d3ee;   /* cyan */
+  --accent: #f472b6;     /* pink */
+
+  --success: #2dd4bf;
+  --warning: #facc15;
+  --danger: #fb7185;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #1e1b4b, transparent 40%),
+    radial-gradient(circle at bottom right, #083344, transparent 45%),
+    linear-gradient(180deg, #020617, #070a17);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   PAGE ANIMATION
+================================ */
+.fade-in {
+  animation: fadeIn .7s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.container {
+  animation: fadeIn .8s ease;
+}
+
+/* ===============================
+   GLASS CARD
+================================ */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--border-glass);
+  border-radius: 18px;
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.05);
+  transition: all .4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,.6),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+/* ===============================
+   CARD TEXT
+================================ */
+.card h5 {
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: .9rem;
+}
+
+/* ===============================
+   BUTTONS (GRADIENT WOW)
+================================ */
+.btn {
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all .35s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* PRIMARY */
+.btn-primary {
+  background: linear-gradient(135deg, #7c7cff, #22d3ee);
+  border: none;
+  color: #020617;
+}
+
+/* SUCCESS */
+.btn-success {
+  background: linear-gradient(135deg, #2dd4bf, #22c55e);
+  border: none;
+  color: #020617;
+}
+
+/* WARNING */
+.btn-warning {
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+  border: none;
+  color: #020617;
+}
+
+/* DANGER */
+.btn-danger {
+  background: linear-gradient(135deg, #fb7185, #e11d48);
+  border: none;
+  color: white;
+}
+
+/* SECONDARY */
+.btn-secondary {
+  background: rgba(255,255,255,.08);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+}
+
+/* ===============================
+   FORM INPUT
+================================ */
+input.form-control,
+textarea.form-control {
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  color: var(--text-main);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(255,255,255,.1);
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 .2rem rgba(34,211,238,.35);
+  color: white;
+}
+
+/* ===============================
+   HEADER BAR
+================================ */
+h3 {
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   GRID ENTRY ANIMATION
+================================ */
+.col-md-4 {
+  animation: cardIn .5s ease forwards;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   DELETE BUTTON EFFECT
+================================ */
+.btn-danger:hover {
+  box-shadow: 0 0 18px rgba(251,113,133,.7);
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 576px) {
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+}
