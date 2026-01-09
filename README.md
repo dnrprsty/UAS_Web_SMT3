@@ -160,4 +160,20 @@ http://localhost/projects/app_oop_modular/
 
 ## Screenshot 
 ### Halaman Login
-!()[ss/login.png]
+![](ss/login.png)
+### Halaman List
+![](ss/list.png)
+### Halaman Tambah
+![](ss/add.png)
+### Halaman Edit
+![](ss/edit.png)
+### Halaman Hapus
+![](ss/delete.png)
+
+## Biodata 
+### Nama : Danur Wenda Prasetiyo 
+### NIM : 312410008
+### Kelas : TI 24 A1
+### Jurusan : Teknik Informatika
+### Universitas Pelita Bangsa 
+
