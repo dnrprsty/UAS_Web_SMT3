@@ -100,6 +100,7 @@ app_oop_modular/
 - User harus login untuk mengakses menu post
 - Sistem login menggunakan session
 - Terdapat role **admin** dan **user**
+- password **admin** dan **user**
 
 ### 2. CRUD Post
 - **Create**: Menambahkan data post
